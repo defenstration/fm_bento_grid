@@ -4,6 +4,12 @@
 
 /* Colors */
 :root {
+    --clr-purple100: 254 88% 90%;
+    --clr-purple500: 256 67% 59%;
+    --clr-yellow100: 31 66% 93%;
+    --clr-yellow500: 39 100% 71%;
+    --clr-white: 0 0% 100%;
+    --clr-black: 0 0% 7%;
 }
 
 /*--------------------------------*/
@@ -24,13 +30,14 @@ body, h1, h2, h3, h4, p, ul, ol {
 
 body {
     font-family: 'Outfit', 'sans-serif';
-    width: 100vw;
+    width: 100%;
     min-width: 320px;
-    background-color:  hsl(var());
+    background-color:  hsl(var(--clr-white));
     line-height: 150%;
     letter-spacing: 0px;
-    font-size: 1rem;
-    color: hsl(var())
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: hsl(var(--clr-black))
 }
 
 /* Image Settings                        */
@@ -71,9 +78,29 @@ img {
 
 .flex {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+}
+
+.grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.purple-box {
+    color: hsl(var(--clr-white));
+    background: hsl(var(--clr-purple500));
+    grid-column: span 2;
+}
+
+.yellow-box {
+    background: hsl(var(--clr-yellow500));
+}
+
+.light-yellow-box {
+    background: hsl(var(--clr-yellow100));
+}
+
+.light-purple-box {
+    background: hsl(var(--clr-purple100));
 }
 
 /* Frontend Mentor Attribution    */
@@ -87,6 +114,11 @@ img {
 /*--------------------------------*/
 /* Styling                        */
 /*--------------------------------*/
+
+main {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
 
 
 /*--------------------------------*/
