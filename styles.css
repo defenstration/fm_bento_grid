@@ -52,7 +52,8 @@ body {
     letter-spacing: 0px;
     font-size: var(--fs-18);
     font-weight: var(--fw-400);
-    color: hsl(var(--clr-black))
+    color: hsl(var(--clr-black));
+    grid-template-rows: 1fr auto 1fr;
 }
 
 /* Image Settings                        */
