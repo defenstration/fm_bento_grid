@@ -2,14 +2,29 @@
 /* Custom Properties              */
 /*--------------------------------*/
 
-/* Colors */
+
 :root {
+    /* Colors */
     --clr-purple100: 254 88% 90%;
     --clr-purple500: 256 67% 59%;
     --clr-yellow100: 31 66% 93%;
     --clr-yellow500: 39 100% 71%;
     --clr-white: 0 0% 100%;
     --clr-black: 0 0% 7%;
+
+    /* Font */
+    --ff-dmsans: "DM Sans", sans-serif;
+
+    /* Font Weights*/
+    --fw-400: 400;
+    --fw-500: 500;
+
+    /* Font Sizes */
+    --fs-18: 1.125rem;
+    --fs-32: 2rem;
+    --fs-40: 2.5rem;
+    --fs-62: 3.875rem;
+
 }
 
 /*--------------------------------*/
@@ -29,14 +44,14 @@ body, h1, h2, h3, h4, p, ul, ol {
 /* Set body                               */
 
 body {
-    font-family: 'Outfit', 'sans-serif';
+    font-family: var(--ff-dmsans);
     width: 100%;
     min-width: 320px;
     background-color:  hsl(var(--clr-white));
     line-height: 150%;
     letter-spacing: 0px;
-    font-size: 1.125rem;
-    font-weight: 400;
+    font-size: var(--fs-18);
+    font-weight: var(--fw-400);
     color: hsl(var(--clr-black))
 }
 
@@ -79,6 +94,7 @@ img {
 
 .flex {
     display: flex;
+    gap: 2rem;
 }
 
 .grid {
@@ -103,6 +119,32 @@ img {
 .light-purple-box {
     background: hsl(var(--clr-purple100));
 }
+
+.txt-purple {
+    color: hsl(var(--clr-purple500));
+}
+
+.txt-yellow {
+    color: hsl(var(--clr-yellow500))
+}
+
+.text-1 {
+    font-size: var(--fs-18);
+}
+
+.text-2 {
+    font-size: var(--fs-32);
+}
+
+.text-3 {
+    font-size: var(--fs-40);
+}
+
+.text-4 {
+    font-size: var(--fs-62);
+}
+
+
 
 /* Frontend Mentor Attribution    */
 .attribution { font-size: 11px; text-align: center; }
@@ -135,6 +177,80 @@ main {
     grid-row: 1 / span 3;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
+}
+
+/* Faster with ai card styling */
+
+.faster-with-ai {
+    grid-column: 2 / 4;
+    grid-row: 1;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    
+}
+
+.faster-with-ai h2 {
+    line-height: 90%;
+    margin-bottom: 1.5rem;
+    font-weight: var(--fw-500);
+}
+
+.faster-with-ai img {
+    width: 10rem;
+    margin-inline: auto;
+}
+
+.multiple-platforms {
+    grid-column: 2;
+    grid-row: 2;
+
+}
+
+.maintain-schedule {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+/* Schedule to social media */
+.schedule-to-social {
+    grid-column: 4;
+    grid-row: 1 /3;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 2rem;
+}
+
+.schedule-to-social img {
+    
+}
+
+.grow-followers {
+    grid-column: 3 / 5;
+    grid-row: 3;
+}
+
+.audience-growth {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.quicker, .write-ai{
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 415px;
+    width: 256px;
+    padding: 2rem;
+}
+
+.quicker{
+    
+}
+
+.write-ai {
+
 }
 
 
