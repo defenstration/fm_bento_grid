@@ -72,6 +72,7 @@ body {
     font-weight: var(--fw-400);
     color: hsl(var(--clr-black));
     grid-template-rows: 1fr auto 1fr;
+    text-wrap: pretty;
 }
 
 header, footer {
@@ -202,7 +203,7 @@ main {
 .card {
     max-height: 100%;
     border-radius: 1rem;
-    padding: var(--spc-300);
+    padding: var(--spc-200);
     overflow: hidden;
 }
 
@@ -211,15 +212,11 @@ main {
 .faster-with-ai {
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    padding: var(--spc-400);
-    gap: 0;
-    
+    text-align: center;   
 }
 
 .faster-with-ai h2 {
     line-height: 90%;
-    margin-top: var(--spc-400);
     margin-bottom: var(--spc-300);
     font-weight: var(--fw-500);
 }
@@ -365,16 +362,16 @@ main {
       grid-template-columns: 343px;  
     }
 
-    .card {
-        padding: var(--spc-400)
-    }
-
     .manage-maintain {
         flex-direction: column;
     }
 
+    .multiple-platforms {
+        font-size: var(--fs-18);
+    }
+
     .faster-with-ai {
-        height: 343px;
+        padding-block: 3rem;
     }
 
     .faster-with-ai h2 {
