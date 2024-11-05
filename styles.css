@@ -5,43 +5,43 @@
 
 :root {
     /* Colors */
-    --clr-purple100: 254 88% 90%;
-    --clr-purple500: 256 67% 59%;
-    --clr-yellow100: 31 66% 93%;
-    --clr-yellow500: 39 100% 71%;
-    --clr-white: 0 0% 100%;
-    --clr-black: 0 0% 7%;
+    --clr-purple100: 254, 88%, 90%;
+    --clr-purple500: 256, 67%, 59%;
+    --clr-yellow100: 31, 66%, 93%;
+    --clr-yellow500: 39, 100%, 71%;
+    --clr-white: 0, 0%, 100%;
+    --clr-black: 0, 0%, 7%;
 
-    /* Font */
-    --ff-dmsans: "DM Sans", sans-serif;
+    /*Font*/
+    --ff-dmsans: "DM Sans", "sans-serif";
 
-    /* Font Weights*/
-    --fw-400: 400;
-    --fw-500: 500;
+    /*Font Weights*/
+    --fw-normal: 400;
+    --fw-bold: 500;
 
-    /* Font Sizes */
-    --fs-18: 1.125rem;
-    --fs-32: 2rem;
-    --fs-40: 2.5rem;
-    --fs-62: 3.875rem;
+    /*Font Sizes*/
+    --fs-largest: 3.875rem;
+    --fs-medbig: 2.5rem;
+    --fs-medsmall: 2rem;
+    --fs-regular: 1.125rem;
 
-    /* Letter Spacing */
-    --ls-3: -.125rem;
-    --ls-2: -1px;
-    --ls-0: 0rem;
+    /*Line Height*/
+    --lh-largest: 93.5%;
+    --lh-medbig: 90%;
+    --lh-medsmall: 87.5%;
+    --lh-regular: 111%;
 
-    /* Line Heights */
-    --lh-90: 90%;
-    --lh-111: 111%;
-    --lh-935: 93.5%;
-    --lh-875: 87.5%;
+    /*Letter Spacing*/
+    --ls-regular: 0px;
+    --ls-med: -2px;
+    --ls-large: -3px;
 
-    /* Spacing */
-    --spc-100: .5rem;
-    --spc-200: 1rem;
-    --spc-300: 1.5rem;
-    --spc-400: 2rem;
+    /*Spacing*/ 
     --spc-500: 2.5rem;
+    --spc-400: 2rem;
+    --spc-300: 1.5rem;
+    --spc-200: 1rem;
+    --spc-100: .5rem;
 }
 
 /*--------------------------------*/
@@ -54,8 +54,17 @@
 
 /* Reset margins                          */
 
-body, h1, h2, h3, h4, p, ul, ol {
-    margin: 0
+body, h1, h2, h3, h4, h5, h6, p, ul, ol {
+    margin: 0;
+    text-wrap: balance;
+}
+
+p, li {
+    text-wrap: pretty;
+}
+
+header, footer, main, section, article {
+    container-type: inline-size;
 }
 
 /* Set body                               */
@@ -63,27 +72,19 @@ body, h1, h2, h3, h4, p, ul, ol {
 body {
     font-family: var(--ff-dmsans);
     width: 100%;
-    min-width: 320px;
-    min-height: 100vh;
+    min-width: 20rem;
     background-color:  hsl(var(--clr-white));
-    line-height: 150%;
-    letter-spacing: 0px;
-    font-size: var(--fs-18);
-    font-weight: var(--fw-400);
-    color: hsl(var(--clr-black));
+    line-height: var(--lh-regular);
+    letter-spacing: var(--ls-regular);
+    font-size: var(--fs-regular);
+    color: hsl(var());
     grid-template-rows: 1fr auto 1fr;
-    text-wrap: pretty;
-}
-
-header, footer {
-    height: fit-content;
 }
 
 /* Image Settings                        */
 img {
     display: block;
     max-width: 100%;
-    max-height: 100%;
 }
 
 /* remove animations for people who've turned them off */
@@ -121,264 +122,104 @@ img {
 }
 
 .grid {
-    display: grid;
+    display: grid
 }
 
-.purple-box {
-    color: hsl(var(--clr-white));
-    background: hsl(var(--clr-purple500));
+/* Font Classes                   */
+
+.text-1 {
+    font-size: var(--fs-medbig);
+    letter-spacing: var(--ls-med);
+    line-height: var(--lh-medbig);
+    font-weight: var(--fw-bold);
+    padding-inline: var(--spc-200);
 }
 
-.yellow-box {
-    background: hsl(var(--clr-yellow500));
+.text-4 {
+    font-size: var(--fs-regular);
+    letter-spacing: var(--ls-regular);
+    line-height: var(--lh-regular);
+    font-weight: var(--fw-normal);
+    width: 100%;
 }
 
-.light-yellow-box {
-    background: hsl(var(--clr-yellow100));
-}
-
-.light-purple-box {
-    background: hsl(var(--clr-purple100));
-}
-
-.white-box {
-    background: hsl(var(--clr-white));
+/* Color Classes                  */
+.txt-yellow {
+    color: hsl(var(--clr-yellow500));
 }
 
 .txt-purple {
     color: hsl(var(--clr-purple500));
 }
 
-.txt-yellow {
-    color: hsl(var(--clr-yellow500))
+.txt-white {
+    color: hsl(var(--clr-white));
 }
 
-.text-1 {
-    font-size: var(--fs-62);
-    line-height: var(--lh-935);
-    font-weight: var(--fw-500);
-    /* letter-spacing: var(--ls-3); */
+.bg-purple {
+    background-color: hsl(var(--clr-purple500));
 }
 
-.text-2 {
-    font-size: var(--fs-40);
-    line-height: var(--lh-90);
-    font-weight: var(--fw-500);
-    /* letter-spacing: var(--ls-2); */
+.bg-yellow {
+    background-color: hsl(var(--clr-yellow500));
 }
-
-.text-3 {
-    font-size: var(--fs-32);
-    line-height: var(--lh-875);
-    font-weight: var(--fw-500);
-    letter-spacing: var(--ls-2);
-}
-
-.text-4 {
-    font-size: var(--fs-18);
-    line-height: var(--lh-111);
-    font-weight: var(--fw-400);
-    letter-spacing: var(--ls-0);
-}
-
-
-
-/* Frontend Mentor Attribution    */
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
-
-/* Font Classes                   */
-
-/* Color Classes                  */
-
 /*--------------------------------*/
 /* Styling                        */
 /*--------------------------------*/
 
+ {
+    border: 1px solid black
+}
+
+/*Initial - mobile - design*/
+
 main {
     margin-inline: auto;
+    grid-template-columns: 343px;
     gap: var(--spc-400);
 }
 
-.card {
-    max-height: 100%;
-    border-radius: 1rem;
-    padding: var(--spc-200);
-    overflow: hidden;
-}
-
-/* Faster with ai card styling */
-
-.faster-with-ai {
+#faster-with-ai, #manage-maintain {
     flex-direction: column;
-    align-items: center;
-    text-align: center;   
 }
 
-.faster-with-ai h2 {
-    line-height: 90%;
-    margin-bottom: var(--spc-300);
-    font-weight: var(--fw-500);
+
+#faster-with-ai {
+    width: 100%;
+    padding: var(--spc-400);
+    height: 20.25rem;
+    text-align: center;
+    justify-content: space-evenly;
 }
 
-.faster-with-ai img {
-    width: 12rem;
+.five-star-wrapper {
+    height: 3.75rem;
+    width: 13.8125rem;
+    margin-inline: auto;
+    margin-top: var(--spc-300)
+}
+
+.five-star-wrapper img {
+    width: 90%;
     margin-inline: auto;
     margin-bottom: var(--spc-100);
 }
 
-/* Multiple Platforms */
+#manage-maintain {
 
-.manage-maintain {
-    border-radius: 1rem;
-}
-.multiple-platforms {
-    padding: var(--spc-300);
-    flex-direction: column;
-    gap: 0;
-    justify-content: space-between;
-    overflow: hidden;
 }
 
-.multiple-platforms h2 {
-    width: 90%;
+
+
+
+@media (min-width: 688px) {
+
 }
 
-.multiple-platforms img {
-    max-width: none;
-    width: 20.3rem;
-    
-}
-
-/* Maintain Schedule */
-
-.maintain-schedule img {
-    margin-top: var(--spc-200);
-}
-
-/* Schedule to social media */
-.schedule-to-social {
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: var(--spc-400);
-    overflow: hidden;
-}
-
-.schedule-to-social img {
-    max-width: none;
-    width: 22rem;
-    margin-block: var(--spc-300);
-}
-
-/* Grow Followers */
-
-.grow-followers {
-    gap: var(--spc-100);
-    align-items: center;
-}
-
-/* Audience Growth */
-
-.audience-growth {
-    flex-direction: column;
-}
-
-.audience-growth p {
-    margin-top: var(--spc-200);
-    margin-bottom: var(--spc-400);
-}
-
-.audience-growth img {
-    width: 80%;
-}
-
-/* Left column */
-.quicker, .write-ai{
-    flex-direction: column;
-    height: 415px;
-    width: 256px;
-    border-radius: 1rem;
-}
-
-.quicker{
-    justify-content: center;
-}
-
-.write-ai {
-    justify-content: space-between;
-    padding-right: .75rem;
-}
-
-.write-ai h2 {
-    width: 75%;
-}
-
-/*--------------------------------*/
-/* Styling for small screens      */
-/*--------------------------------*/
-
-@media (min-width: 1200px) {
-    main {
-        width: 1120px;
-        height: 881px;
-        grid-template-columns: repeat(4, minmax(0 , 16rem));
-        grid-template-rows: minmax(0, 20.25rem) repeat(2, minmax(0, 15.375rem));
+@media (min-width: 1080px) {
+    .text-1 {
+        font-size: var(--fs-largest);
+        letter-spacing: var(--ls-large);
+        line-height: var(--lh-largest);
     }
 }
-
-@media (width < 1200px) {
-    main {
-        grid-template-columns: 688px;
-        grid-auto-rows: auto;
-    }
-
-    .card {
-        width: 100%;
-    }
-
-    .faster-with-ai {
-        
-    }
-    
-    .manage-maintain {
-    
-    }
-    
-    .schedule-to-social {
-    
-    }
-    
-    .grow-followers {
-        flex-direction: column;
-    }
-    
-    .audience-growth {
-        
-    }
-}
-
-@media (width < 700px) {
-    main {
-      grid-template-columns: 343px;  
-    }
-
-    .manage-maintain {
-        flex-direction: column;
-    }
-
-    .multiple-platforms {
-        font-size: var(--fs-18);
-    }
-
-    .faster-with-ai {
-        padding-block: 3rem;
-    }
-
-    .faster-with-ai h2 {
-        font-size: var(--fs-40);
-        padding-inline: var(--spc-200);
-    }
-}
-
-
-
