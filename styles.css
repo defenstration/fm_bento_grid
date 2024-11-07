@@ -56,7 +56,7 @@
 
 body, h1, h2, h3, h4, h5, h6, p, ul, ol {
     margin: 0;
-    text-wrap: balance;
+    /* text-wrap: balance; */
 }
 
 p, li {
@@ -135,6 +135,20 @@ img {
     padding-inline: var(--spc-200);
 }
 
+.text-2 {
+    font-size: var(--fs-medbig);
+    letter-spacing: var(--ls-med);
+    line-height: var(--lh-medbig);
+    font-weight: var(--fw-bold);
+}
+
+.text-3 {
+    font-size: var(--fs-medsmall);
+    letter-spacing: var(--ls-med);
+    line-height: var(--lh-medsmall);
+    font-weight: var(--fw-bold);
+}
+
 .text-4 {
     font-size: var(--fs-regular);
     letter-spacing: var(--ls-regular);
@@ -163,6 +177,19 @@ img {
 .bg-yellow {
     background-color: hsl(var(--clr-yellow500));
 }
+
+.bg-white {
+    background-color: hsl(var(--clr-white));
+}
+
+/*Padding Classes*/
+.pd-lrg {
+    padding: var(--spc-300)
+}
+
+.pd-sml {
+    padding: var(--spc-200)
+}
 /*--------------------------------*/
 /* Styling                        */
 /*--------------------------------*/
@@ -175,11 +202,12 @@ img {
 
 main {
     margin-inline: auto;
-    grid-template-columns: 343px;
+    grid-template-columns: 348px;
     gap: var(--spc-400);
+    background-color: grey;
 }
 
-#faster-with-ai, #manage-maintain {
+#faster-with-ai, #multiple-platforms, #grow-followers, #write-ai, #create-and-schedule {
     flex-direction: column;
 }
 
@@ -205,12 +233,8 @@ main {
     margin-bottom: var(--spc-100);
 }
 
-#manage-maintain {
-
+#multiple-platforms {
 }
-
-
-
 
 @media (min-width: 688px) {
 
