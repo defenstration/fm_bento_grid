@@ -60,7 +60,7 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol {
 }
 
 p, li {
-    text-wrap: pretty;
+    /* text-wrap: pretty; */
 }
 
 header, footer, main, section, article {
@@ -129,7 +129,7 @@ img {
 
 .text-1 {
     font-size: var(--fs-medbig);
-    letter-spacing: var(--ls-med);
+    /* letter-spacing: -2px; */
     line-height: var(--lh-medbig);
     font-weight: var(--fw-bold);
 }
@@ -189,15 +189,6 @@ img {
     background-color: hsl(var(--clr-white));
 }
 
-/*Padding Classes*/
-.pd-lrg {
-    padding: var(--spc-300)
-}
-
-.pd-sml {
-    padding: var(--spc-200)
-}
-
 /*--------------------------------*/
 /* Styling                        */
 /*--------------------------------*/
@@ -210,27 +201,29 @@ main {
 
 .card {
     border-radius: 1rem;
-    max-width: 100%;
+    width: 100%;
     max-height: 100%;
     overflow: hidden;
     padding: var(--spc-200);
 }
 
-#faster-with-ai, #multiple-platforms, #schedule-to-social, #grow-followers {
+#faster-with-ai, #multiple-platforms, #schedule-to-social, #grow-followers, #audience-growth, #create-and-schedule, #write-ai {
     flex-direction: column;
 }
 
-/* faster with ai */
+/* Social Media 10x Faster with AI */
 
 #faster-with-ai{
     text-align: center;
     align-items: center;
-    padding: var(--spc-400);
+    padding-block: var(--spc-500);
+    padding-inline: var(--spc-400);
     justify-content: space-evenly;
+    gap: var(--spc-200)
 }
 
 #faster-with-ai h2 {
-    padding-inline: var(--spc-400);
+    padding-inline: var(--spc-300);
 }
 
 .five-star-wrapper {
@@ -239,13 +232,75 @@ main {
 }
 
 .five-star-wrapper img {
-    width: 80%;
+    width: 85%;
     margin-inline: auto;
-    padding-block: var(--spc-100)
 }
 
+/* Manage Multiple Accounts and Platforms */
 
+#multiple-platforms {
+    gap: var(--spc-200)
+}
 
+/* Maintain a consistent posting schedule */
+#maintain-schedule {
+
+}
+
+#maintain-schedule img {
+    width: 13rem;
+    transform: translate(0, 1rem);
+}
+
+/* Schedule to social media */
+
+#schedule-to-social {
+    gap: var(--spc-200);
+}
+
+/* Grow followers with non-stop content */
+#grow-followers {
+    align-items: center;
+    padding: var(--spc-400);
+    gap: var(--spc-500);
+    text-align: center;
+}
+
+#grow-followers img {
+    width: 80%;
+}
+
+#grow-followers h2 {
+    width: 15rem;
+}
+
+/* 56% Audience Growth */
+
+#audience-growth {
+    gap: var(--spc-300)
+}
+
+#audience-growth img {
+    width: 11.125rem;
+}
+
+/* Create and schedule content quicker */
+#create-and-schedule {
+    gap: var(--spc-300)
+}
+
+#create-and-schedule img {
+    width: 11.9rem;
+}
+
+/* Write your content using AI */
+#write-ai {
+    gap: var(--spc-300);
+    padding: var(--spc-300);
+}
+#write-ai img {
+    width: 13.75rem;
+}
 
 /* Tablet size */
 
