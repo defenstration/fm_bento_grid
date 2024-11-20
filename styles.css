@@ -79,7 +79,6 @@ body {
     font-size: var(--fs-regular);
     color: hsl(var(--clr-black));
     grid-template-rows: 1fr auto 1fr;
-    justify-content: center;
 }
 
 /* Image Settings                        */
@@ -133,7 +132,6 @@ img {
     letter-spacing: var(--ls-med);
     line-height: var(--lh-medbig);
     font-weight: var(--fw-bold);
-    padding-inline: var(--spc-200);
 }
 
 .text-2 {
@@ -204,10 +202,10 @@ img {
 /* Styling                        */
 /*--------------------------------*/
 main {
-    margin: var(--spc-200);
-    grid-template-columns: 16rem;
-    margin: auto;
+    max-width: 70rem;
+    grid-template-columns: 21.4375rem;
     gap: var(--spc-400);
+    margin-inline: auto;
 }
 
 .card {
@@ -222,16 +220,44 @@ main {
     flex-direction: column;
 }
 
+/* faster with ai */
+
 #faster-with-ai{
-    justify-content: center;
+    text-align: center;
     align-items: center;
+    padding: var(--spc-400);
+    justify-content: space-evenly;
 }
+
+#faster-with-ai h2 {
+    padding-inline: var(--spc-400);
+}
+
+.five-star-wrapper {
+    height: 3.75rem;
+    width: 13.8125rem;
+}
+
+.five-star-wrapper img {
+    width: 80%;
+    margin-inline: auto;
+    padding-block: var(--spc-100)
+}
+
+
+
+
+/* Tablet size */
 
 @media (min-width: 688px){
     main {
         grid-template-columns: repeat(2, 20.5rem);
         grid-auto-rows: 6.25rem;
 
+    }
+
+    .text-1 {
+        font-size: var(--fs-largest);
     }
 
     #faster-with-ai, #schedule-to-social, #grow-followers, #audience-growth {
@@ -256,18 +282,12 @@ main {
 
 }
 
-
-
-
-
-
-
-
+/* Desktop size */
 
 @media (min-width: 1120px){
     main{
-        grid-template-columns: repeat(12, 5.33rem);
-        grid-template-rows: repeat(10, 5.33rem);
+        grid-template-columns: repeat(12, 4rem);
+        grid-template-rows: repeat(10, 4rem);
     }
 
     #faster-with-ai {
