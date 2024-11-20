@@ -222,21 +222,46 @@ main {
     flex-direction: column;
 }
 
+#faster-with-ai{
+    justify-content: center;
+    align-items: center;
+}
+
 @media (min-width: 688px){
     main {
-        grid-template-columns: repeat(2, 16rem);
+        grid-template-columns: repeat(2, 20.5rem);
+        grid-auto-rows: 6.25rem;
 
     }
 
-    .grid-3x6, .grid-4x6, .grid-7x3{
+    #faster-with-ai, #schedule-to-social, #grow-followers, #audience-growth {
         grid-column: span 2;
     }
 
-    #audience-growth{
-        grid-column: span 2;
+    #multiple-platforms, #maintain-schedule, #grow-followers{
+        grid-row: span 2
+    }
+
+    #faster-with-ai, #create-and-schedule, #write-ai{
+        grid-row: span 3
+    }
+
+    #schedule-to-social{
+        grid-row: span 4
+    }
+
+    #create-and-schedule{
+        grid-row: span 3
     }
 
 }
+
+
+
+
+
+
+
 
 
 @media (min-width: 1120px){
